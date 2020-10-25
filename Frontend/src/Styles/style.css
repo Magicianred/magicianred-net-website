@@ -1,0 +1,258 @@
+/* Created by http://freehtml5templates.com */
+
+/* reset */
+*, ::after, ::before {
+margin: 0;
+padding: 0;
+box-sizing: initial !important;
+}
+
+/* render html5 elements as block */
+header, footer, section, aside, nav, article {
+display: block;
+}
+
+body {
+line-height: 1;
+background: #1F4677 !important;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #666;
+font-size: 14px;
+line-height: 18px;
+}
+	
+/* layout */
+
+#wrapper {
+width: 940px;
+margin: 0 auto;
+margin-top: 5px;
+margin-bottom: 5px;
+-webkit-box-shadow: 3px 3px 7px #777;
+-moz-box-shadow: 3px 3px 7px #777;
+}
+
+nav {
+width: 940px;
+height: 69px;
+margin: 0 auto;
+background: #1F4677 url(/images/blueprintpaper.png) repeat-x;
+}
+
+.header-description {
+position:relative;
+width: 940px;
+height: 200px;
+margin: 0 auto;
+background: #D2E1F6;
+}
+
+#main {
+width: 940px;
+margin: 0 auto;
+padding: 10px 0 10px 0;
+background: #fff;
+overflow: hidden;
+}
+
+#content {
+float: right;
+width: 590px;
+margin-right: 30px;
+}
+
+#sidebar {
+float: left;
+padding-left: 20px;
+width: 270px;
+background: #fff;
+border-right: 4px #1F4677 solid;
+}
+
+footer {
+width: 940px;
+margin: 0 auto;
+clear: both;
+}
+
+/* basics */
+
+h1,h2,h3,h4,h5,h6 {
+font-weight: bold;
+clear: both;
+color: #333;
+}
+
+a:link, a:visited {
+color:#1F4677;
+text-decoration: none;
+}
+
+a:hover, a:active {
+color: #333;
+text-decoration: underline;
+}
+
+p {
+margin-bottom: 18px;
+}
+
+li {
+padding-left: 5px;
+}
+
+/* nav */
+
+nav .menu {
+font-size: 22px;
+font-weight: bold;
+padding: 0 !important;
+}
+
+nav .menu div {
+margin: 0;
+padding: 25px 0 0 20px;
+list-style: none;
+line-height: normal;
+}
+
+/* nav .menu a {
+display: block;
+float: left;
+} */
+
+nav.menu div a.header-link {
+    font-size: 22px;
+    font-weight: bold;
+display: block;
+float: left;
+margin-right: 5px;
+padding: 0px 15px;
+text-decoration: none;
+color: #1F4677 !important;
+}
+
+nav .menu a:hover {
+text-decoration: underline;
+}
+
+/** HEADER */
+
+#plandesign {
+position: absolute;
+top: 0px;
+right: 2px;
+}
+
+header h1, header p {
+margin: 0;
+padding: 0 0 0 30px;
+line-height: normal;
+}
+
+header h1 { 	
+float: left;
+padding-top: 20px; 
+}
+
+header h1 a:link, header h1 a:visited {
+text-decoration: none;
+color: #333;
+}
+
+header h1 a:hover { 
+text-decoration: underline; 
+}
+
+header p {
+padding: 80px 0 0 30px;
+width: 500px;
+font-style: italic;
+font-size: 14px;
+color: #333;
+}
+
+/** ARTICLES **/
+article img {
+border: none;
+-webkit-box-shadow: 3px 3px 7px #777;
+-moz-box-shadow: 3px 3px 7px #777;
+}
+
+#content p, ul, ol, hr {
+margin-bottom: 24px;
+}
+
+#content ul ul, ol ol, ul ol, ol ul {
+margin-bottom: 0;
+}
+
+#content h1, h2, h3, h4, h5, h6 {
+color: #333;
+margin: 0 0 20px 0;
+line-height: 1.5em;
+}
+
+.alignleft, img.alignleft {
+display: inline;
+float: left;
+margin-right: 24px;
+margin-top: 4px;
+}
+
+.alignright, img.alignright {
+display: inline;
+float: right;
+margin-left: 24px;
+margin-top: 4px;
+}
+
+.aligncenter, img.aligncenter {
+clear: both;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+img.alignleft, img.alignright, img.aligncenter {
+margin-bottom: 12px;
+}
+
+/* sidebar and footer widget blocks */
+
+aside h3 {
+    padding-bottom: 10px;
+font-size: 20px;
+}
+
+aside ul {
+list-style: inside;
+color: #333;
+margin-bottom: 20px;
+margin-top: -15px;
+}
+
+#footer-area {
+background: #D2E1F6;
+color: #333;
+font-size: 90%;
+padding: 18px 0;
+overflow: hidden;
+}
+
+.footer-segment {
+float: left;
+margin-right: 20px;
+margin-left: 20px;
+width: 190px;
+}
+
+footer aside h4 {
+color: #333;
+font-size: 16px;
+line-height: 1.5em;
+}
+
+footer p {
+margin-top: -15px;
+}

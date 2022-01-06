@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
+using System.Net.Http.Headers;
 using System.Web.Http;
 
 namespace Magicianred.Net.Backend.Web
@@ -19,6 +18,15 @@ namespace Magicianred.Net.Backend.Web
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(
+                config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml"));
+
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Remove(
+                config.Formatters.JsonFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "text/html"));
+
+            config.Formatters.JsonFormatter.SupportedMediaTypes
+                .Add(new MediaTypeHeaderValue("application/json"));
         }
     }
 }

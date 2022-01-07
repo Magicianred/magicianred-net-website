@@ -9,3 +9,8 @@ Frontend/package-lock.json
 /Backend/Magicianred.Net.Backend/Magicianred.Net.Backend.DAL.Fake/bin/Debug/netstandard2.0
 /Backend/Magicianred.Net.Backend/Magicianred.Net.Backend.Domain/bin/Debug/netstandard2.0
 /Backend/Magicianred.Net.Backend/packages
+/Backend/Magicianred.Net.Backend/.vs/Magicianred.Net.Backend/DesignTimeBuild/.dtbcache.v2
+/Backend/Magicianred.Net.Backend/Magicianred.Net.Backend.BL/bin/Release/netstandard2.0
+/Backend/Magicianred.Net.Backend/Magicianred.Net.Backend.DAL.Fake/bin/Release/netstandard2.0
+/Backend/Magicianred.Net.Backend/Magicianred.Net.Backend.Domain/bin/Release/netstandard2.0
+/Backend/Magicianred.Net.Backend/Magicianred.Net.Backend.Web/obj/Release

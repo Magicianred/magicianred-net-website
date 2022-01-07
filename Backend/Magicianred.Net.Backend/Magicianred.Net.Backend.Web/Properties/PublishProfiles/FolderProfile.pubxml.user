@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>E:\publish\magicianred.net</_PublishTargetUrl>
-    <History>True|2022-01-07T09:19:03.5698563Z;</History>
+    <History>True|2022-01-07T14:11:00.8350603Z;True|2022-01-07T10:19:03.5698563+01:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -15,34 +15,34 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>01/07/2022 10:19:00</publishTime>
+      <publishTime>01/07/2022 15:10:59</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>01/07/2022 10:19:00</publishTime>
+      <publishTime>01/07/2022 15:10:59</publishTime>
     </File>
     <File Include="bin/Magicianred.Net.Backend.BL.dll">
-      <publishTime>01/07/2022 10:18:50</publishTime>
+      <publishTime>01/07/2022 15:10:49</publishTime>
     </File>
     <File Include="bin/Magicianred.Net.Backend.BL.pdb">
-      <publishTime>01/07/2022 10:18:50</publishTime>
+      <publishTime>01/07/2022 15:10:49</publishTime>
     </File>
     <File Include="bin/Magicianred.Net.Backend.DAL.Fake.dll">
-      <publishTime>01/07/2022 10:18:50</publishTime>
+      <publishTime>01/07/2022 15:10:50</publishTime>
     </File>
     <File Include="bin/Magicianred.Net.Backend.DAL.Fake.pdb">
-      <publishTime>01/07/2022 10:18:50</publishTime>
+      <publishTime>01/07/2022 15:10:50</publishTime>
     </File>
     <File Include="bin/Magicianred.Net.Backend.Domain.dll">
-      <publishTime>01/07/2022 10:18:49</publishTime>
+      <publishTime>01/07/2022 15:10:49</publishTime>
     </File>
     <File Include="bin/Magicianred.Net.Backend.Domain.pdb">
-      <publishTime>01/07/2022 10:18:49</publishTime>
+      <publishTime>01/07/2022 15:10:49</publishTime>
     </File>
     <File Include="bin/Magicianred.Net.Backend.Web.dll">
-      <publishTime>01/07/2022 10:18:51</publishTime>
+      <publishTime>01/07/2022 15:10:51</publishTime>
     </File>
     <File Include="bin/Magicianred.Net.Backend.Web.pdb">
-      <publishTime>01/07/2022 10:18:51</publishTime>
+      <publishTime>01/07/2022 15:10:51</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>07/08/2020 21:52:58</publishTime>
@@ -165,7 +165,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/28/2018 11:59:46</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>02/11/2014 14:26:04</publishTime>
+      <publishTime>02/11/2014 15:26:04</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
       <publishTime>11/28/2018 12:00:12</publishTime>
@@ -195,7 +195,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/05/2019 13:26:34</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>01/23/2014 12:57:34</publishTime>
+      <publishTime>01/23/2014 14:57:34</publishTime>
     </File>
     <File Include="Content/bootstrap-grid.css">
       <publishTime>01/06/2022 19:18:17</publishTime>
@@ -297,10 +297,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/06/2022 18:16:10</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>01/06/2022 18:16:10</publishTime>
+      <publishTime>10/03/2020 08:05:22</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>01/07/2022 10:18:54</publishTime>
+      <publishTime>01/07/2022 15:10:53</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
       <publishTime>01/06/2022 19:18:11</publishTime>
@@ -372,13 +372,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/06/2022 18:16:27</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>01/06/2022 18:16:10</publishTime>
+      <publishTime>01/07/2022 11:06:29</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>01/06/2022 18:16:10</publishTime>
+      <publishTime>01/07/2022 11:06:29</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>01/06/2022 18:16:10</publishTime>
+      <publishTime>01/07/2022 11:06:29</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>01/06/2022 18:16:10</publishTime>
@@ -387,13 +387,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/06/2022 19:21:35</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>01/06/2022 18:16:10</publishTime>
+      <publishTime>01/07/2022 11:06:29</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
       <publishTime>01/06/2022 18:16:10</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/07/2022 10:18:52</publishTime>
+      <publishTime>01/07/2022 15:10:52</publishTime>
     </File>
   </ItemGroup>
 </Project>

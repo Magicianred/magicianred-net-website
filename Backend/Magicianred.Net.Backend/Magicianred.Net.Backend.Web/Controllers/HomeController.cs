@@ -7,7 +7,8 @@ namespace Magicianred.Net.Backend.Web.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return Redirect(Url.Content("~/index.html"));
+            //return View();
         }
 
         public ActionResult About()

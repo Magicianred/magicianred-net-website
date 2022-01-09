@@ -5,11 +5,17 @@ VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicianred.Net.Backend.Web", "Magicianred.Net.Backend.Web\Magicianred.Net.Backend.Web.csproj", "{1CCD14EE-4B00-48B7-B0F0-463D53A85949}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicianred.Net.Backend.Domain", "Magicianred.Net.Backend.Domain\Magicianred.Net.Backend.Domain.csproj", "{D9495399-50E5-4CCD-8E36-7A16424A8F41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicianred.Net.Backend.Domain", "Magicianred.Net.Backend.Domain\Magicianred.Net.Backend.Domain.csproj", "{D9495399-50E5-4CCD-8E36-7A16424A8F41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicianred.Net.Backend.BL", "Magicianred.Net.Backend.BL\Magicianred.Net.Backend.BL.csproj", "{C18FF8E2-FBF9-4811-8EFD-9634758ABC6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicianred.Net.Backend.BL", "Magicianred.Net.Backend.BL\Magicianred.Net.Backend.BL.csproj", "{C18FF8E2-FBF9-4811-8EFD-9634758ABC6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicianred.Net.Backend.DAL.Fake", "Magicianred.Net.Backend.DAL.Fake\Magicianred.Net.Backend.DAL.Fake.csproj", "{1651F8E2-D735-4AC2-98E5-1936B74B38D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicianred.Net.Backend.DAL.Fake", "Magicianred.Net.Backend.DAL.Fake\Magicianred.Net.Backend.DAL.Fake.csproj", "{1651F8E2-D735-4AC2-98E5-1936B74B38D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StagingArea", "StagingArea", "{B92278AF-6E18-4E47-BA4B-F32261C3BA40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicianred.StagingArea.Domain", "Magicianred.StagingArea.Domain\Magicianred.StagingArea.Domain.csproj", "{E3550225-B354-4ED4-BE01-5CDD50FB5C6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicianred.StagingArea.BL", "Magicianred.StagingArea.BL\Magicianred.StagingArea.BL.csproj", "{E9E66CDC-6479-47E1-A8F9-3D5769F01BDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +39,21 @@ Global
 		{1651F8E2-D735-4AC2-98E5-1936B74B38D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1651F8E2-D735-4AC2-98E5-1936B74B38D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1651F8E2-D735-4AC2-98E5-1936B74B38D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3550225-B354-4ED4-BE01-5CDD50FB5C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3550225-B354-4ED4-BE01-5CDD50FB5C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3550225-B354-4ED4-BE01-5CDD50FB5C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3550225-B354-4ED4-BE01-5CDD50FB5C6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9E66CDC-6479-47E1-A8F9-3D5769F01BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9E66CDC-6479-47E1-A8F9-3D5769F01BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9E66CDC-6479-47E1-A8F9-3D5769F01BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9E66CDC-6479-47E1-A8F9-3D5769F01BDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3550225-B354-4ED4-BE01-5CDD50FB5C6E} = {B92278AF-6E18-4E47-BA4B-F32261C3BA40}
+		{E9E66CDC-6479-47E1-A8F9-3D5769F01BDE} = {B92278AF-6E18-4E47-BA4B-F32261C3BA40}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9E613091-F731-4DE6-BCAA-FCD5D16E0BD7}

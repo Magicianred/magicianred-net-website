@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Magicianred.Net.Backend.Domain\Magicianred.Net.Backend.Domain.csproj" />
     <ProjectReference Include="..\Magicianred.StagingArea.Domain\Magicianred.StagingArea.Domain.csproj" />
   </ItemGroup>
 

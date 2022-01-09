@@ -1,14 +1,15 @@
-﻿using Magicianred.Net.Backend.Domain.Interfaces.Models;
-using Magicianred.Net.Backend.Domain.ModelsHelpers;
+﻿using Magicianred.StagingArea.Domain.Interfaces.Models;
+using Magicianred.StagingArea.Domain.Interfaces.Services;
+using Magicianred.StagingArea.Domain.ModelsHelpers;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace Magicianred.Net.Backend.Domain.Interfaces.Services
+namespace Magicianred.StagingArea.BL.Services
 {
     /// <summary>
     /// Represent application entity (internal or external)
     /// </summary>
-    public interface IPostsService
+    public class RegistryApplicationService : IRegistryApplicationService
     {
         /// <summary>
         /// Count all items
@@ -16,7 +17,10 @@ namespace Magicianred.Net.Backend.Domain.Interfaces.Services
         /// <param name="itemParamsHelper">Sorting and filters</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>Count of elements</returns>
-        long GetCountAll(PostParamsHelper itemParamsHelper, CancellationToken cancelToken = default);
+        public long GetCountAll(RegistryApplicationParamsHelper itemParamsHelper, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Retrieve items
@@ -24,7 +28,10 @@ namespace Magicianred.Net.Backend.Domain.Interfaces.Services
         /// <param name="itemParamsHelper">Sorting and filters</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>List of items</returns>
-        IEnumerable<IPost> GetAll(PostParamsHelper itemParamsHelper, CancellationToken cancelToken = default);
+        public IEnumerable<IRegistryApplication> GetAll(RegistryApplicationParamsHelper itemParamsHelper, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Retrieve an item from identifier
@@ -32,34 +39,49 @@ namespace Magicianred.Net.Backend.Domain.Interfaces.Services
         /// <param name="id">identifier of the item</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>the item with id</returns>
-        IPost GetById(int id, CancellationToken cancelToken = default);
+        public IRegistryApplication GetById(int id, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Insert a new item
         /// </summary>
         /// <param name="item">data of the new item</param>
         /// <param name="cancelToken">cancel token</param>
-        void Insert(IPost item, CancellationToken cancelToken = default);
+        public void Insert(IRegistryApplication item, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Update an item by id
         /// </summary>
-        /// <param name="item">data of the new post</param>
+        /// <param name="item">data of the new item</param>
         /// <param name="cancelToken">cancel token</param>
-        void UpdateById(long id, IPost item, CancellationToken cancelToken = default);
+        public void UpdateById(long id, IRegistryApplication item, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Delete an item
         /// </summary>
         /// <param name="item">the item to delete</param>
         /// <param name="cancelToken">cancel token</param>
-        void Delete(IPost item, CancellationToken cancelToken = default);
+        public void Delete(IRegistryApplication item, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Delete an item by id
         /// </summary>
         /// <param name="id">id of the item</param>
         /// <param name="cancelToken">cancel token</param>
-        void DeleteById(long id, CancellationToken cancelToken = default);
+        public void DeleteById(long id, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

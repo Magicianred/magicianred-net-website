@@ -16,6 +16,6 @@ namespace Magicianred.Net.Backend.Web.Models
         public string Text { get; set; }
 
         [DataMember]
-        public DateTime CreateDate { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

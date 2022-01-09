@@ -4,28 +4,23 @@ using System.Collections.Generic;
 namespace Magicianred.Net.Backend.Domain.Interfaces.Models
 {
     /// <summary>
-    /// Represent a Post
+    /// Represent a Tag
     /// </summary>
-    public interface IPost : IEntityWithTenant, IEntityChanges, IEntitySoftDelete
+    public interface ITag : IEntityBase
     {
         /// <summary>
-        /// Identifier
-        /// </summary>
-        int Id { get; set; }
-
-        /// <summary>
-        /// Title of the post
+        /// Title of the tag
         /// </summary>
         string Title { get; set; }
 
         /// <summary>
-        /// Text of the post
+        /// Description of the tag
         /// </summary>
-        string Text { get; set; }
+        string Description { get; set; }
 
         /// <summary>
-        /// List of the tags for the post
+        /// List of the post for the tag
         /// </summary>
-        List<ITag> Tags { get; set; }
+        List<IPost> Posts { get; set; }
     }
 }

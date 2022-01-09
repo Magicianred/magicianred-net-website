@@ -28,7 +28,7 @@ namespace Magicianred.Net.Backend.Web.Factories
                     Id = itemDTO.Id,
                     Title = itemDTO.Title,
                     Text = itemDTO.Text,
-                    CreateDate = itemDTO.CreateDate
+                    CreateDate = itemDTO.CreatedDate
                 };
             }
             return model;
@@ -68,7 +68,7 @@ namespace Magicianred.Net.Backend.Web.Factories
                     Id = model.Id,
                     Title = model.Title,
                     Text = model.Text,
-                    CreateDate = model.CreateDate
+                    CreatedDate = model.CreatedDate
                 };
             }
             return itemDTO;
@@ -108,7 +108,7 @@ namespace Magicianred.Net.Backend.Web.Factories
                     Id = model.Id,
                     Title = model.Title,
                     Text = model.Text,
-                    CreateDate = model.CreateDate
+                    CreatedDate = model.CreateDate
                 };
             }
             return itemDTO;

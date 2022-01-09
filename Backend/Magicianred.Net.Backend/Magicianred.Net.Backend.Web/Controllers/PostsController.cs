@@ -7,6 +7,10 @@ using Magicianred.Net.Backend.Domain.Models;
 using Magicianred.Net.Backend.Web.Models;
 using System.Collections.Generic;
 using System.Web.Http;
+using Magicianred.Net.Backend.Domain.ModelsHelpers;
+using Magicianred.Net.Backend.Domain.Interfaces.Models;
+using System.Linq;
+using System.Threading;
 
 namespace Magicianred.Net.Backend.Web.Controllers
 {
@@ -22,7 +26,7 @@ namespace Magicianred.Net.Backend.Web.Controllers
         public PostsController()
         {
             _postsRepository = new FakePostsRepository();
-            _postsService = new PostsService(_postsRepository);
+            _postsService = new PostsService(_postsRepository, null);
         }
 
         /// <summary>
@@ -40,9 +44,20 @@ namespace Magicianred.Net.Backend.Web.Controllers
         /// </summary>
         /// <returns>list of Posts</returns>
         [HttpGet]
-        public IEnumerable<PostDTO> Get()
+        public IEnumerable<PostDTO> Get(CancellationToken cancelToken = default)
         {
-            var posts = _postsService.GetAll();
+            PostParamsHelper itemsParam = new PostParamsHelper
+            {
+                Page = 1,
+                ItemsPerPage = 10
+            };
+
+            var posts = new List<IPost>();
+            var postsEnumerable = _postsService.GetAll(itemsParam, cancelToken);
+            if(postsEnumerable != null && postsEnumerable.Any())
+            {
+                posts = postsEnumerable.ToList();
+            }
 
             return posts.ToItemDTOs();
         }
@@ -55,15 +70,15 @@ namespace Magicianred.Net.Backend.Web.Controllers
         /// <returns>the post with requested id</returns>
         [HttpGet]
         //[Route("{id}")]
-        public PostDTO Get(int id)
+        public PostDTO Get(int id, CancellationToken cancelToken = default)
         {
-            var post = _postsService.GetById(id);
+            var post = _postsService.GetById(id, cancelToken);
 
             return post.ToItemDTO();
         }
 
         [HttpPost]
-        public void Add()
+        public void Add(CancellationToken cancelToken = default)
         {
             Post newPost = new Post()
             {
@@ -71,7 +86,7 @@ namespace Magicianred.Net.Backend.Web.Controllers
                 Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis enim eu augue tincidunt tincidunt. Nam luctus pharetra tortor, sit amet sodales odio bibendum non.",
                 CreateDate = System.DateTime.Now
             };
-            _postsService.Add(newPost);
+            _postsService.Insert(newPost, cancelToken);
             //_logger.LogInformation("Added fake post!");
         }
     }

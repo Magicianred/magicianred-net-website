@@ -2,8 +2,11 @@
 using Magicianred.Net.Backend.Domain.Interfaces.Models;
 using Magicianred.Net.Backend.Domain.Interfaces.Repositories;
 using Magicianred.Net.Backend.Domain.Models;
+using Magicianred.Net.Backend.Domain.ModelsHelpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace Magicianred.Net.Backend.DAL.Fake.Repositories
 {
@@ -20,36 +23,56 @@ namespace Magicianred.Net.Backend.DAL.Fake.Repositories
             FakePostsRepository.LoadData();
         }
 
-        /// <summary>
-        /// Retrieve all Posts items
-        /// </summary>
-        /// <returns>list of post</returns>
-        public IEnumerable<IPost> GetAll()
+        public long GetCountAll(PostParamsHelper itemParamsHelper, CancellationToken cancelToken = default)
         {
-            IEnumerable<IPost> posts = MemoryCache<Post>.Items;
+            // TODO use params
+            return MemoryCache<Post>.Items.Count();
+        }
 
+        public IEnumerable<IPost> GetAll(PostParamsHelper itemParamsHelper, CancellationToken cancelToken = default)
+        {
+            // TODO use params
+            IEnumerable<IPost> posts = MemoryCache<Post>.Items;
             return posts;
         }
 
-        /// <summary>
-        /// Retrieve post by own id
-        /// </summary>
-        /// <param name="id">id of the post to retrieve</param>
-        /// <returns>the post, null if id not found</returns>
-        public IPost GetById(int id)
+        public IPost GetById(int id, CancellationToken cancelToken = default)
         {
             IPost post = MemoryCache<Post>.Items.Find(item => item.Id == id);
 
             return post;
         }
 
-        void IPostsRepository.AddPost(IPost item)
+        public IPost Insert(IPost item, CancellationToken cancelToken = default)
         {
             Post newEntry = (Post)item;
             newEntry.Id = MemoryCache<Post>.Items.Max(element => element.Id) + 1;
+
             MemoryCache<Post>.Items.Add(newEntry);
+
+            return newEntry;
         }
 
+        public IPost UpdateById(long id, IPost itemToUpdate, CancellationToken cancelToken = default)
+        {
+            IPost post = MemoryCache<Post>.Items.Find(item => item.Id == id);
+            post.EditedDate = DateTime.Now;
+            post.Title = itemToUpdate.Title;
+            post.Text = itemToUpdate.Text;
+
+            return post;
+        }
+
+        public void Delete(IPost item, CancellationToken cancelToken = default)
+        {
+            MemoryCache<Post>.Items.Remove((Post)item);
+        }
+
+        public void DeleteById(long id, CancellationToken cancelToken = default)
+        {
+            IPost post = MemoryCache<Post>.Items.Find(item => item.Id == id);
+            this.Delete(post);
+        }
 
         #region private methods
 

@@ -1,8 +1,12 @@
 ﻿using Magicianred.Net.Backend.Domain.Interfaces.Models;
 using Magicianred.Net.Backend.Domain.Interfaces.Repositories;
 using Magicianred.Net.Backend.Domain.Interfaces.Services;
+using Magicianred.Net.Backend.Domain.ModelsHelpers;
+using Magicianred.StagingArea.Domain.Interfaces.Handlers;
+using Magicianred.StagingArea.Domain.Interfaces.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace Magicianred.Net.Backend.BL.Services
 {
@@ -12,38 +16,53 @@ namespace Magicianred.Net.Backend.BL.Services
     public class PostsService : IPostsService
     {
         private readonly IPostsRepository _postsRepository;
+        private readonly IRegistryHandler _registryHandler;
 
         /// <summary>
         /// Constructor
         /// </summary>
-        public PostsService(IPostsRepository postsRepository)
+        public PostsService(IPostsRepository postsRepository, IRegistryHandler registryHandler = null)
         {
             _postsRepository = postsRepository;
+            _registryHandler = registryHandler;
         }
 
-        public void Add(IPost entry)
+        public void Delete(IPost item, CancellationToken cancelToken = default)
         {
-            _postsRepository.AddPost(entry);
+            _postsRepository.Delete(item, cancelToken);
+
+            // registry event
+            _registryHandler.Insert();
         }
 
-        /// <summary>
-        /// Retrieve all posts
-        /// </summary>
-        /// <returns>list of posts</returns>
-        public List<IPost> GetAll()
+        public void DeleteById(long id, CancellationToken cancelToken = default)
         {
-            return _postsRepository.GetAll().ToList();
+            _postsRepository.DeleteById(id, cancelToken);
         }
 
-        /// <summary>
-        /// Retrieve the post by own id
-        /// </summary>
-        /// <param name="id">id of post to retrieve</param>
-        /// <returns>the post, null if id not found</returns>
-        public IPost GetById(int id)
+        public IEnumerable<IPost> GetAll(PostParamsHelper itemParamsHelper, CancellationToken cancelToken = default)
         {
-            return _postsRepository.GetById(id);
+            throw new System.NotImplementedException();
         }
 
+        public IPost GetById(int id, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public long GetCountAll(PostParamsHelper itemParamsHelper, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Insert(IPost item, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void UpdateById(long id, IPost item, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

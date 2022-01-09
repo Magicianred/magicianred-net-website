@@ -1,14 +1,14 @@
-﻿using Magicianred.Net.Backend.Domain.Interfaces.Models;
-using Magicianred.Net.Backend.Domain.ModelsHelpers;
+﻿using Magicianred.StagingArea.Domain.Interfaces.Models;
+using Magicianred.StagingArea.Domain.ModelsHelpers;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace Magicianred.Net.Backend.Domain.Interfaces.Repositories
+namespace Magicianred.StagingArea.BL.Services
 {
     /// <summary>
     /// Repository for Registry Application CRUD
     /// </summary>
-    public interface IPostsRepository
+    public class RegistryEventService
     {
         /// <summary>
         /// Count all items
@@ -16,7 +16,10 @@ namespace Magicianred.Net.Backend.Domain.Interfaces.Repositories
         /// <param name="itemParamsHelper">Sorting and filters</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>Count of elements</returns>
-        long GetCountAll(PostParamsHelper itemParamsHelper, CancellationToken cancelToken = default);
+        public long GetCountAll(RegistryEventParamsHelper itemParamsHelper, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Retrieve all items
@@ -24,7 +27,10 @@ namespace Magicianred.Net.Backend.Domain.Interfaces.Repositories
         /// <param name="itemParamsHelper">Sorting and filters</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>List of items</returns>
-        IEnumerable<IPost> GetAll(PostParamsHelper itemParamsHelper, CancellationToken cancelToken = default);
+        public IEnumerable<IRegistryEvent> GetAll(RegistryEventParamsHelper itemParamsHelper, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Retrieve an item from identifier
@@ -32,34 +38,49 @@ namespace Magicianred.Net.Backend.Domain.Interfaces.Repositories
         /// <param name="id">identifier of the item</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>the item with id</returns>
-        IPost GetById(int id, CancellationToken cancelToken = default);
+        public IRegistryEvent GetById(int id, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Insert a new item
         /// </summary>
         /// <param name="item">data of the new item</param>
         /// <param name="cancelToken">cancel token</param>
-        IPost Insert(IPost item, CancellationToken cancelToken = default);
+        public void Insert(IRegistryEvent item, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Update an item by id
         /// </summary>
-        /// <param name="item">data of the new post</param>
+        /// <param name="item">data of the new item</param>
         /// <param name="cancelToken">cancel token</param>
-        IPost UpdateById(long id, IPost item, CancellationToken cancelToken = default);
+        public void UpdateById(long id, IRegistryEvent item, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Delete an item
         /// </summary>
         /// <param name="item">the item to delete</param>
         /// <param name="cancelToken">cancel token</param>
-        void Delete(IPost item, CancellationToken cancelToken = default);
+        public void Delete(IRegistryEvent item, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Delete an item by id
         /// </summary>
         /// <param name="id">id of the item</param>
         /// <param name="cancelToken">cancel token</param>
-        void DeleteById(long id, CancellationToken cancelToken = default);
+        public void DeleteById(long id, CancellationToken cancelToken = default)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

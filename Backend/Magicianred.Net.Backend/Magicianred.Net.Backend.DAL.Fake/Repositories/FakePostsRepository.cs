@@ -36,7 +36,7 @@ namespace Magicianred.Net.Backend.DAL.Fake.Repositories
             return posts;
         }
 
-        public IPost GetById(int id, CancellationToken cancelToken = default)
+        public IPost GetById(long id, CancellationToken cancelToken = default)
         {
             IPost post = MemoryCache<Post>.Items.Find(item => item.Id == id);
 

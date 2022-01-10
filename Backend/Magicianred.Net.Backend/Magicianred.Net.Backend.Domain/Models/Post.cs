@@ -19,5 +19,6 @@ namespace Magicianred.Net.Backend.Domain.Models
         public DateTime? EditedDate { get; set; }
         public long? DeletedId { get; set; }
         public DateTime? DeletedDate { get; set; }
+        public bool IsPublished { get; set; }
     }
 }

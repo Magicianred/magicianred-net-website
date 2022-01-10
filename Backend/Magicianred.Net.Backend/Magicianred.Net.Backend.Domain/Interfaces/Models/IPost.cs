@@ -27,5 +27,10 @@ namespace Magicianred.Net.Backend.Domain.Interfaces.Models
         /// List of the tags for the post
         /// </summary>
         List<ITag> Tags { get; set; }
+
+        /// <summary>
+        /// Indicate if it's published or it's a draft
+        /// </summary>
+        bool IsPublished { get; set; }
     }
 }

@@ -32,7 +32,7 @@ namespace Magicianred.Net.Backend.Domain.Interfaces.Repositories
         /// <param name="id">identifier of the item</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>the item with id</returns>
-        IPost GetById(int id, CancellationToken cancelToken = default);
+        IPost GetById(long id, CancellationToken cancelToken = default);
 
         /// <summary>
         /// Insert a new item

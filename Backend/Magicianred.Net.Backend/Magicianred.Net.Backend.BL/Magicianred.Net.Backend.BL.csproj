@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Magicianred.Net.Backend.Domain\Magicianred.Net.Backend.Domain.csproj" />
-    <ProjectReference Include="..\Magicianred.StagingArea.Domain\Magicianred.StagingArea.Domain.csproj" />
+    <ProjectReference Include="..\RegistryArea\Magicianred.RegistryArea\Magicianred.RegistryArea.Domain\Magicianred.RegistryArea.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

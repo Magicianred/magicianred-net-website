@@ -198,10 +198,6 @@
       <Project>{D9495399-50E5-4CCD-8E36-7A16424A8F41}</Project>
       <Name>Magicianred.Net.Backend.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Magicianred.StagingArea.Domain\Magicianred.StagingArea.Domain.csproj">
-      <Project>{E3550225-B354-4ED4-BE01-5CDD50FB5C6E}</Project>
-      <Name>Magicianred.StagingArea.Domain</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

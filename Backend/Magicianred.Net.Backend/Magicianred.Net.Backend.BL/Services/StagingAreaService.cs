@@ -1,7 +1,7 @@
 ﻿using Magicianred.Net.Backend.Domain.Interfaces.Models;
 using Magicianred.Net.Backend.Domain.Interfaces.Services;
-using Magicianred.StagingArea.Domain.Interfaces.Handlers;
-using Magicianred.StagingArea.Domain.Interfaces.Models;
+using Magicianred.RegistryArea.Domain.Interfaces.Handlers;
+using Magicianred.RegistryArea.Domain.Interfaces.Models;
 using Newtonsoft.Json;
 
 namespace Magicianred.Net.Backend.BL.Services

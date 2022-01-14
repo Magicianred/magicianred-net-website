@@ -1,4 +1,5 @@
 ﻿using Magicianred.StagingArea.Domain.Interfaces.Models;
+using Magicianred.StagingArea.Domain.Interfaces.Services;
 using Magicianred.StagingArea.Domain.ModelsHelpers;
 using System.Collections.Generic;
 using System.Threading;
@@ -8,7 +9,7 @@ namespace Magicianred.StagingArea.BL.Services
     /// <summary>
     /// Repository for Registry Event Type CRUD
     /// </summary>
-    public class RegistryEventTypeService
+    public class RegistryEventTypeService : IRegistryEventTypeService
     {
         /// <summary>
         /// Count all items

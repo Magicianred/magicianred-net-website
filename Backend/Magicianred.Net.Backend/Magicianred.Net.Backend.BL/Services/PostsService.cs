@@ -3,7 +3,6 @@ using Magicianred.Net.Backend.Domain.Interfaces.Repositories;
 using Magicianred.Net.Backend.Domain.Interfaces.Services;
 using Magicianred.Net.Backend.Domain.ModelsHelpers;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Threading;
 
 namespace Magicianred.Net.Backend.BL.Services
@@ -13,8 +12,6 @@ namespace Magicianred.Net.Backend.BL.Services
     /// </summary>
     public class PostsService : IPostsService
     {
-        private readonly bool UseRegistryEvents = ConfigurationManager.AppSettings["UseRegistryEvents"] == "true";
-
         private readonly IPostsRepository _postsRepository;
         private readonly IStagingAreaService _stagingAreaService;
 
@@ -48,18 +45,18 @@ namespace Magicianred.Net.Backend.BL.Services
             return item;
         }
 
-        public void Insert(IPost item, CancellationToken cancelToken = default)
+        public void Insert(IPost item, bool useRegistryEvents = true, CancellationToken cancelToken = default)
         {
             IPost newItem = _postsRepository.Insert(item, cancelToken);
 
             // registry event
-            if (UseRegistryEvents)
+            if (useRegistryEvents)
             {
                 _stagingAreaService.RegistryPostInsert(newItem);
             }
         }
 
-        public void UpdateById(long id, IPost item, CancellationToken cancelToken = default)
+        public void UpdateById(long id, IPost item, bool useRegistryEvents = true, CancellationToken cancelToken = default)
         {
             var itemToUpdate = _postsRepository.GetById(id, cancelToken);
 
@@ -69,30 +66,30 @@ namespace Magicianred.Net.Backend.BL.Services
             IPost newItem = _postsRepository.UpdateById(id, itemToUpdate, cancelToken);
 
             // registry event
-            if (UseRegistryEvents)
+            if (useRegistryEvents)
             {
                 _stagingAreaService.RegistryPostUpdate(newItem);
             }
         }
 
-        public void Delete(IPost item, CancellationToken cancelToken = default)
+        public void Delete(IPost item, bool useRegistryEvents = true, CancellationToken cancelToken = default)
         {
             _postsRepository.Delete(item, cancelToken);
 
             // registry event
-            if (UseRegistryEvents)
+            if (useRegistryEvents)
             {
                 _stagingAreaService.RegistryPostDelete(item);
             }
         }
 
-        public void DeleteById(long id, CancellationToken cancelToken = default)
+        public void DeleteById(long id, bool useRegistryEvents = true, CancellationToken cancelToken = default)
         {
             var item = _postsRepository.GetById(id, cancelToken);
             _postsRepository.DeleteById(id, cancelToken);
 
             // registry event
-            if (UseRegistryEvents)
+            if (useRegistryEvents)
             {
                 _stagingAreaService.RegistryPostDelete(item);
             }

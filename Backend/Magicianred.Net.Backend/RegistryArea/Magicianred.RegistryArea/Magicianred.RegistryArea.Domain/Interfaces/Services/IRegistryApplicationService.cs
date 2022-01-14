@@ -1,14 +1,14 @@
-﻿using Magicianred.Net.Backend.Domain.Interfaces.Models;
-using Magicianred.Net.Backend.Domain.ModelsHelpers;
+﻿using Magicianred.RegistryArea.Domain.Interfaces.Models;
+using Magicianred.RegistryArea.Domain.ModelsHelpers;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace Magicianred.Net.Backend.Domain.Interfaces.Services
+namespace Magicianred.RegistryArea.Domain.Interfaces.Services
 {
     /// <summary>
     /// Represent application entity (internal or external)
     /// </summary>
-    public interface IPostsService
+    public interface IRegistryApplicationService
     {
         /// <summary>
         /// Count all items
@@ -16,7 +16,7 @@ namespace Magicianred.Net.Backend.Domain.Interfaces.Services
         /// <param name="itemParamsHelper">Sorting and filters</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>Count of elements</returns>
-        long GetCountAll(PostParamsHelper itemParamsHelper, CancellationToken cancelToken = default);
+        long GetCountAll(RegistryApplicationParamsHelper itemParamsHelper, CancellationToken cancelToken = default);
 
         /// <summary>
         /// Retrieve items
@@ -24,7 +24,7 @@ namespace Magicianred.Net.Backend.Domain.Interfaces.Services
         /// <param name="itemParamsHelper">Sorting and filters</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>List of items</returns>
-        IEnumerable<IPost> GetAll(PostParamsHelper itemParamsHelper, CancellationToken cancelToken = default);
+        IEnumerable<IRegistryApplication> GetAll(RegistryApplicationParamsHelper itemParamsHelper, CancellationToken cancelToken = default);
 
         /// <summary>
         /// Retrieve an item from identifier
@@ -32,39 +32,34 @@ namespace Magicianred.Net.Backend.Domain.Interfaces.Services
         /// <param name="id">identifier of the item</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>the item with id</returns>
-        IPost GetById(int id, CancellationToken cancelToken = default);
+        IRegistryApplication GetById(int id, CancellationToken cancelToken = default);
 
         /// <summary>
         /// Insert a new item
         /// </summary>
         /// <param name="item">data of the new item</param>
-        /// <param name="useRegistryEvents">use registry events or not</param>
         /// <param name="cancelToken">cancel token</param>
-        void Insert(IPost item, bool useRegistryEvents = true, CancellationToken cancelToken = default);
+        void Insert(IRegistryApplication item, CancellationToken cancelToken = default);
 
         /// <summary>
         /// Update an item by id
         /// </summary>
-        /// <param name="id">id of the item</param>
         /// <param name="item">data of the new post</param>
-        /// <param name="useRegistryEvents">use registry events or not</param>
         /// <param name="cancelToken">cancel token</param>
-        void UpdateById(long id, IPost item, bool useRegistryEvents = true, CancellationToken cancelToken = default);
+        void UpdateById(long id, IRegistryApplication item, CancellationToken cancelToken = default);
 
         /// <summary>
         /// Delete an item
         /// </summary>
         /// <param name="item">the item to delete</param>
-        /// <param name="useRegistryEvents">use registry events or not</param>
         /// <param name="cancelToken">cancel token</param>
-        void Delete(IPost item, bool useRegistryEvents = true, CancellationToken cancelToken = default);
+        void Delete(IRegistryApplication item, CancellationToken cancelToken = default);
 
         /// <summary>
         /// Delete an item by id
         /// </summary>
         /// <param name="id">id of the item</param>
-        /// <param name="useRegistryEvents">use registry events or not</param>
         /// <param name="cancelToken">cancel token</param>
-        void DeleteById(long id, bool useRegistryEvents = true, CancellationToken cancelToken = default);
+        void DeleteById(long id, CancellationToken cancelToken = default);
     }
 }

@@ -1,15 +1,15 @@
-﻿using Magicianred.StagingArea.Domain.Interfaces.Models;
-using Magicianred.StagingArea.Domain.Interfaces.Services;
-using Magicianred.StagingArea.Domain.ModelsHelpers;
+﻿using Magicianred.RegistryArea.Domain.Interfaces.Models;
+using Magicianred.RegistryArea.Domain.Interfaces.Services;
+using Magicianred.RegistryArea.Domain.ModelsHelpers;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace Magicianred.StagingArea.BL.Services
+namespace Magicianred.RegistryArea.BL.Services
 {
     /// <summary>
-    /// Repository for Registry Application CRUD
+    /// Repository for Registry Entities CRUD
     /// </summary>
-    public class RegistryEventService : IRegistryEventService
+    public class RegistryEntityService : IRegistryEntityService
     {
         /// <summary>
         /// Count all items
@@ -17,7 +17,7 @@ namespace Magicianred.StagingArea.BL.Services
         /// <param name="itemParamsHelper">Sorting and filters</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>Count of elements</returns>
-        public long GetCountAll(RegistryEventParamsHelper itemParamsHelper, CancellationToken cancelToken = default)
+        public long GetCountAll(RegistryEntityParamsHelper itemParamsHelper, CancellationToken cancelToken = default)
         {
             throw new System.NotImplementedException();
         }
@@ -28,7 +28,7 @@ namespace Magicianred.StagingArea.BL.Services
         /// <param name="itemParamsHelper">Sorting and filters</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>List of items</returns>
-        public IEnumerable<IRegistryEvent> GetAll(RegistryEventParamsHelper itemParamsHelper, CancellationToken cancelToken = default)
+        public IEnumerable<IRegistryEntity> GetAll(RegistryEntityParamsHelper itemParamsHelper, CancellationToken cancelToken = default)
         {
             throw new System.NotImplementedException();
         }
@@ -39,7 +39,7 @@ namespace Magicianred.StagingArea.BL.Services
         /// <param name="id">identifier of the item</param>
         /// <param name="cancelToken">cancel token</param>
         /// <returns>the item with id</returns>
-        public IRegistryEvent GetById(int id, CancellationToken cancelToken = default)
+        public IRegistryEntity GetById(int id, CancellationToken cancelToken = default)
         {
             throw new System.NotImplementedException();
         }
@@ -49,7 +49,7 @@ namespace Magicianred.StagingArea.BL.Services
         /// </summary>
         /// <param name="item">data of the new item</param>
         /// <param name="cancelToken">cancel token</param>
-        public void Insert(IRegistryEvent item, CancellationToken cancelToken = default)
+        public void Insert(IRegistryEntity item, CancellationToken cancelToken = default)
         {
             throw new System.NotImplementedException();
         }
@@ -59,7 +59,7 @@ namespace Magicianred.StagingArea.BL.Services
         /// </summary>
         /// <param name="item">data of the new item</param>
         /// <param name="cancelToken">cancel token</param>
-        public void UpdateById(long id, IRegistryEvent item, CancellationToken cancelToken = default)
+        public void UpdateById(long id, IRegistryEntity item, CancellationToken cancelToken = default)
         {
             throw new System.NotImplementedException();
         }
@@ -69,7 +69,7 @@ namespace Magicianred.StagingArea.BL.Services
         /// </summary>
         /// <param name="item">the item to delete</param>
         /// <param name="cancelToken">cancel token</param>
-        public void Delete(IRegistryEvent item, CancellationToken cancelToken = default)
+        public void Delete(IRegistryEntity item, CancellationToken cancelToken = default)
         {
             throw new System.NotImplementedException();
         }

@@ -1,10 +1,10 @@
-﻿using Magicianred.StagingArea.Domain.Interfaces.Models;
-using Magicianred.StagingArea.Domain.Interfaces.Services;
-using Magicianred.StagingArea.Domain.ModelsHelpers;
+﻿using Magicianred.RegistryArea.Domain.Interfaces.Models;
+using Magicianred.RegistryArea.Domain.Interfaces.Services;
+using Magicianred.RegistryArea.Domain.ModelsHelpers;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace Magicianred.StagingArea.BL.Services
+namespace Magicianred.RegistryArea.BL.Services
 {
     /// <summary>
     /// Repository for Registry Application CRUD

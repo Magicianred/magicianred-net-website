@@ -11,6 +11,7 @@ using Magicianred.Net.Backend.Domain.ModelsHelpers;
 using Magicianred.Net.Backend.Domain.Interfaces.Models;
 using System.Linq;
 using System.Threading;
+using System.Configuration;
 
 namespace Magicianred.Net.Backend.Web.Controllers
 {
@@ -18,6 +19,8 @@ namespace Magicianred.Net.Backend.Web.Controllers
     {
         private readonly IPostsRepository _postsRepository;
         private readonly IPostsService _postsService;
+
+        private readonly bool UseRegistryEvents = ConfigurationManager.AppSettings["UseRegistryEvents"] == "true";
 
         // TODO remove constructor inject - using a Unity system
         /// <summary>
@@ -86,7 +89,7 @@ namespace Magicianred.Net.Backend.Web.Controllers
                 Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis enim eu augue tincidunt tincidunt. Nam luctus pharetra tortor, sit amet sodales odio bibendum non.",
                 CreateDate = System.DateTime.Now
             };
-            _postsService.Insert(newPost, cancelToken);
+            _postsService.Insert(newPost, UseRegistryEvents, cancelToken);
             //_logger.LogInformation("Added fake post!");
         }
     }
